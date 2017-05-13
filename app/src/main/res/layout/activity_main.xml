@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cores_1"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.androidaccelarate.cadastramento.MainActivity">
+
+    <ImageView
+        android:id="@+id/main_imagem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:src="@drawable/pessoas" />
+
+    <Button
+        android:id="@+id/main_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Entrar"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/main_cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Cadastrar"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
