@@ -4,10 +4,6 @@ import android.widget.EditText;
 
 import com.androidaccelarate.cadastramento.com.androidaccelerate.cadastramento.modelo.Pessoa;
 
-/**
- * Created by Glauber on 13/05/2017.
- */
-
 public class CadastroHelper {
 
     private final EditText campoNome;
@@ -30,7 +26,6 @@ public class CadastroHelper {
         pessoa.setSenha(campoSenha.getText().toString());
         return pessoa;
     }
-
 }
 
   /*
