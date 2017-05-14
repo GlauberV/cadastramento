@@ -26,10 +26,10 @@ public class CadastroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Pessoa pessoa = helper.pegaPessoa();
                 PessoaDAO pessoaDAO = new PessoaDAO(CadastroActivity.this);
-                pessoaDAO.inserePessoa(pessoa);
+                pessoaDAO.inserirPessoa(pessoa);
                 pessoaDAO.close();
 
-                String toastText = "Nome: " + pessoa.getNome() + "\nTelefone: " + pessoa.getTelefone() + "\nEmail: " + pessoa.getEmail() + "\nSenha: " + pessoa.getSenha();
+                String toastText = "Cliente (" + pessoa.getNome() + ") adicionado com sucesso";
 
                 Toast toast = Toast.makeText(CadastroActivity.this, toastText, Toast.LENGTH_LONG);
                 toast.show();

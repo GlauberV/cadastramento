@@ -31,7 +31,7 @@ public class PessoaDAO extends SQLiteOpenHelper{
     }
 
 
-    public void inserePessoa(Pessoa pessoa) {
+    public void inserirPessoa(Pessoa pessoa) {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues dados = new ContentValues();
@@ -63,5 +63,13 @@ public class PessoaDAO extends SQLiteOpenHelper{
 
 
         return membros;
+    }
+
+    public void deletarPessoa(Pessoa pessoa) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        String[] params = {pessoa.getId().toString()};
+
+        db.delete("Membros", "id = ?", params);
     }
 }
