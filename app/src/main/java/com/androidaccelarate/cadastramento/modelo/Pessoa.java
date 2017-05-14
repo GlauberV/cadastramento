@@ -1,4 +1,4 @@
-package com.androidaccelarate.cadastramento.com.androidaccelerate.cadastramento.modelo;
+package com.androidaccelarate.cadastramento.modelo;
 
 public class Pessoa {
 

@@ -2,7 +2,7 @@ package com.androidaccelarate.cadastramento;
 
 import android.widget.EditText;
 
-import com.androidaccelarate.cadastramento.com.androidaccelerate.cadastramento.modelo.Pessoa;
+import com.androidaccelarate.cadastramento.modelo.Pessoa;
 
 public class CadastroHelper {
 

@@ -6,12 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.androidaccelarate.cadastramento.com.androidaccelerate.cadastramento.modelo.Pessoa;
+import com.androidaccelarate.cadastramento.modelo.Pessoa;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PessoaDAO extends SQLiteOpenHelper{
+public class PessoaDAO extends SQLiteOpenHelper {
 
     public PessoaDAO(Context context) {
         super(context, "DataBase", null, 1);
@@ -49,7 +49,7 @@ public class PessoaDAO extends SQLiteOpenHelper{
         Cursor c = db.rawQuery(sql, null);
 
         List<Pessoa> membros = new ArrayList<>();
-        while (c.moveToNext()){
+        while (c.moveToNext()) {
             Pessoa pessoa = new Pessoa();
             pessoa.setId(c.getLong(c.getColumnIndex("id")));
             pessoa.setNome(c.getString(c.getColumnIndex("nome")));
@@ -72,4 +72,23 @@ public class PessoaDAO extends SQLiteOpenHelper{
 
         db.delete("Membros", "id = ?", params);
     }
+
+    public Boolean validarEntrada(String nome, String senha) {
+        String sql = "SELECT * FROM Membros WHERE nome=? AND senha=?;";
+        String[] params = {nome, senha};
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(sql, params);
+
+        boolean retorno;
+
+        if (c != null && c.getCount() == 1) {
+            retorno = true;
+        } else {
+            retorno = false;
+        }
+
+        c.close();
+        return retorno;
+    }
 }
+

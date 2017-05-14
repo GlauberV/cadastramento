@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.androidaccelarate.cadastramento.com.androidaccelerate.cadastramento.modelo.Pessoa;
+import com.androidaccelarate.cadastramento.modelo.Pessoa;
 import com.androidaccelarate.cadastramento.dao.PessoaDAO;
 
 import java.util.List;
