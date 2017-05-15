@@ -18,12 +18,13 @@ public class CadastroHelper {
         campoSenha = (EditText) cadastro.findViewById(R.id.cadastro_senha);
     }
 
-    public Pessoa pegaPessoa(){
+    public Pessoa pegaPessoa() {
         Pessoa pessoa = new Pessoa();
         pessoa.setNome(campoNome.getText().toString());
         pessoa.setTelefone(campoTelefone.getText().toString());
         pessoa.setEmail(campoEmail.getText().toString());
         pessoa.setSenha(campoSenha.getText().toString());
+
         return pessoa;
     }
 }

@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icone_cadastro_capa"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".CadastroActivity" />
         <activity android:name=".EntrarActivity" />
-        <activity android:name=".MembrosActivity"></activity>
+        <activity android:name=".MembrosActivity"/>
     </application>
 
 </manifest>

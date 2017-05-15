@@ -34,8 +34,8 @@ public class EntrarActivity extends AppCompatActivity {
                     startActivity(intentVaiParaAreaDeMembros);
                     finish();
                 } else {
-                    String oqsaiu = entradaNome.getText().toString() + entradaSenha.getText().toString();
-                    Toast.makeText(EntrarActivity.this, "Dados Invalidos" + oqsaiu, Toast.LENGTH_SHORT).show();
+                    String toastText = "\nNome: " + entradaNome.getText().toString() + "\nSenha: " + entradaSenha.getText().toString();
+                    Toast.makeText(EntrarActivity.this, "Dados Invalidos" + toastText, Toast.LENGTH_SHORT).show();
                 }
             }
         });

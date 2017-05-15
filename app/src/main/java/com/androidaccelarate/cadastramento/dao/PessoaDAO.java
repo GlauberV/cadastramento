@@ -30,7 +30,6 @@ public class PessoaDAO extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
     public void inserirPessoa(Pessoa pessoa) {
         SQLiteDatabase db = getWritableDatabase();
 
@@ -41,6 +40,26 @@ public class PessoaDAO extends SQLiteOpenHelper {
         dados.put("senha", pessoa.getSenha());
 
         db.insert("Membros", null, dados);
+    }
+
+    public Boolean verificarCadstroRepetido(Pessoa pessoa) {
+        String sql = "SELECT * FROM Membros WHERE nome = ? AND senha = ?;";
+        String[] params = {pessoa.getNome(), pessoa.getSenha()};
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(sql, params);
+
+        boolean retorno;
+
+        c.moveToFirst();
+        if (c.getCount() == 1){
+            retorno = false;
+        }else {
+            retorno = true;
+        }
+        c.close();
+        return retorno;
+
+        //Se achar um nome ou senha iguais o retorno será 1 se não será 0.
     }
 
     public List<Pessoa> buscarPessoa() {
